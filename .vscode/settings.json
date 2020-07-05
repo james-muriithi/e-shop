@@ -1,0 +1,10 @@
+{
+    "files.autoGuessEncoding": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true
+}
