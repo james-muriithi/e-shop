@@ -1,0 +1,156 @@
+.footer-section {
+    background: #191919;
+    padding-top: 30px;
+    margin-top: 50px;
+}
+
+.footer-left {
+    margin-bottom: 20px;
+}
+
+.footer-left .footer-logo {
+    margin-bottom: 24px;
+}
+
+.footer-left .footer-logo a {
+    display: inline-block;
+}
+
+.footer-left ul li a,
+.footer-left ul li {
+    list-style: none;
+    color: #b2b2b2;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.footer-left .footer-social {
+    padding-top: 25px;
+}
+
+.footer-left .footer-social a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: #434445;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 7px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-left .footer-social a:hover:before {
+    opacity: 1;
+}
+
+.footer-left .footer-social a:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #e7ab3c;
+    content: "";
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.footer-widget {
+    margin-bottom: 30px;
+}
+
+.footer-widget h5 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 26px;
+}
+
+.footer-widget ul li {
+    list-style: none;
+}
+
+.footer-widget ul li a {
+    line-height: 36px;
+    font-size: 16px;
+    color: #b2b2b2;
+}
+
+.newslatter-item h5 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.newslatter-item p {
+    color: #b2b2b2;
+    line-height: 26px;
+}
+
+.newslatter-item .subscribe-form {
+    position: relative;
+}
+
+.newslatter-item .subscribe-form input {
+    color: #b2b2b2;
+    background: #303030;
+    width: 100%;
+    height: 46px;
+    font-size: 16px;
+    border: none;
+    padding-left: 20px;
+}
+
+.newslatter-item .subscribe-form input::-webkit-input-placeholder {
+    color: #b2b2b2;
+}
+
+.newslatter-item .subscribe-form input::-moz-placeholder {
+    color: #b2b2b2;
+}
+
+.newslatter-item .subscribe-form input:-ms-input-placeholder {
+    color: #b2b2b2;
+}
+
+.newslatter-item .subscribe-form input::-ms-input-placeholder {
+    color: #b2b2b2;
+}
+
+.newslatter-item .subscribe-form input::placeholder {
+    color: #b2b2b2;
+}
+
+.newslatter-item .subscribe-form button {
+    display: inline-block;
+    color: #ffffff;
+    background: #e7ab3c;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #e7ab3c;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 13px 20px 12px;
+    cursor: pointer;
+}
+
+.copyright-reserved {
+    border-top: 1px solid #303030;
+    padding: 15px 0;
+    margin-top: 45px;
+}
+
+.copyright-reserved .copyright-text {
+    float: left;
+    font-size: 16px;
+    color: #b2b2b2;
+}

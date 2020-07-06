@@ -38,3 +38,11 @@ button.btn {
     background: #339933;
     color: #f4f4f4;
 }
+
+button {
+    outline: none;
+}
+
+button:active {
+    outline: none;
+}

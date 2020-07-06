@@ -74,7 +74,7 @@ const NavBar = (props) => {
                                             <td className="si-text">
                                                 <div className="product-selected">
                                                     <p>$60.00 x 1</p>
-                                                    <h6>Brown Sweater</h6>
+                                                    <h6>Sweater</h6>
                                                 </div>
                                             </td>
                                             <td className="si-close">
@@ -103,7 +103,7 @@ const NavBar = (props) => {
                                 <h5>$120.00</h5>
                             </div>
                             <div className="select-button">
-                                <a href="#" className="primary-btn checkout-btn">CHECK OUT</a>
+                                <Link to="/" className="primary-btn checkout-btn">CHECK OUT</Link>
                             </div>
                         </div>
                     </Link>

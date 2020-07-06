@@ -79,7 +79,7 @@
     .cart-icon .cart-hover .select-items table tr td.si-pic img {
         border: 1px solid #ebebeb;
         width: 70px;
-        height: 70px;
+        height: 100px;
         border-radius: 5px;
     }
     
@@ -150,7 +150,7 @@
     
     @media only screen and (max-width: 479px) {
         .cart-icon .cart-hover {
-            width: 270px;
+            width: 300px;
             padding: 20px;
         }
     }

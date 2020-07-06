@@ -3,19 +3,18 @@ import PropTypes from "prop-types"
 
 import Navbar from "../navbar/Navbar"
 import "./layout.css"
+import Footer from "../footer/Footer"
 
 const Layout = ({ children }) => {
 
     return (
         <>
-            <div>
+            <div style={{overflowX: "hidden"}}>
                 <Navbar />
 
                 <main>{children}</main>
 
-                <footer>
-                    Â© {new Date().getFullYear()}
-                </footer>
+                <Footer />
             </div>
         </>
     )
