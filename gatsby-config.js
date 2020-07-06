@@ -3,7 +3,7 @@ module.exports = {
     title: `e-shop`,
     description: `Simple e-commerce website in react.`,
     author: `@james-muriithi`,
-    siteUrl: '',
+    siteUrl: 'https://my-online-shop.netlify.app/',
     siteLanguage: `en`,
     ogLanguage: `en`,
     headline: `E-Shop`,
