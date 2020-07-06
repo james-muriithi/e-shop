@@ -23,6 +23,18 @@
     position: relative;
 }
 
+.navbar-toggler {
+    border: none!important;
+    outline: none!important;
+}
+
+@media (max-width: 767px) {
+    .navbar-toggler {
+        border: none;
+        outline: none;
+    }
+}
+
 .header__cart {
     margin-top: -10px;
 }

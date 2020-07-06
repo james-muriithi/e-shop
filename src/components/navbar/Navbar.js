@@ -22,7 +22,7 @@ const NavBar = (props) => {
     return (
         <div>
             <Navbar color="light" light expand="md" fixed>
-                <Link to="/" className="navbar-brand">E-Shop</Link>
+                <Link to="/" className="navbar-brand">e-shop</Link>
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
@@ -52,7 +52,7 @@ const NavBar = (props) => {
                 </Collapse>
                 <div className="header__cart d-flex ml-auto">
                     <Link to="#" className="nav-link">
-                        <i class="fa fa-heart"></i>
+                        <i className="fa fa-heart"></i>
                         <span>2</span>
                     </Link>
                     <Link to="#" className="nav-link">

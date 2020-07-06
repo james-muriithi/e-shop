@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap');
+@font-face {
+    font-family: Aventura;
+    src: url("../../fonts/Kingsman.ttf") format("opentype");
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.navbar-brand {
+    font-family: Aventura, serif;
+    font-size: 28px!important;
+}
+
 .carousel-item {
     width: 100%!important;
-    height: 400px!important;
+    max-height: 600px!important;
 }
 
 .title-divider h4 {
