@@ -58,7 +58,7 @@ const NavBar = (props) => {
                         <i className="fa fa-heart"></i>
                         <span className="number">2</span>
                     </Link>
-                    <Link to="#" className="nav-link cart-icon">
+                    <div to="#" className="nav-link cart-icon">
                         <div>
                             <i className="fa fa-shopping-bag"></i>
                             <span className="number">3</span>
@@ -106,7 +106,7 @@ const NavBar = (props) => {
                                 <Link to="/" className="primary-btn checkout-btn">CHECK OUT</Link>
                             </div>
                         </div>
-                    </Link>
+                    </div>
                 </div>
                 <NavbarToggler onClick={toggle} />
             </Navbar>

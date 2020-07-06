@@ -56,11 +56,11 @@ export default function Footer() {
                     </Col>
                 </Row>
             </Container>
-            <div class="copyright-reserved">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="copyright-text">
+            <div className="copyright-reserved">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="copyright-text">
                                 Copyright © {new Date().getFullYear()}  All rights reserved 
                             </div>
                         </div>

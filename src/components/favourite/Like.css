@@ -1,0 +1,249 @@
+button.fav {
+    border: none!important;
+    padding: 0px!important;
+    outline: none;
+    background: transparent;
+}
+
+button.fav label {
+    margin-bottom: 4px!important;
+}
+
+button.fav svg {
+    cursor: pointer;
+    overflow: visible;
+    width: 45px;
+    margin: 0px;
+}
+
+button.fav svg #heart {
+    transform-origin: center;
+    animation: animateHeartOut .3s linear forwards;
+}
+
+svg #main-circ {
+    transform-origin: 29.5px 29.5px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checked svg #heart {
+    /* transform: scale(0.2); */
+    fill: #e67300;
+    animation: animateHeart 3s linear forwards .25s;
+}
+
+.checked svg #main-circ {
+    transition: all 2s;
+    animation: animateCircle .3s linear forwards;
+    opacity: 1;
+}
+
+.checked svg #grp1 {
+    opacity: 1;
+    transition: .1s all .3s;
+}
+
+.checked svg #grp1 #oval1 {
+    transform: scale(0) translate(0, -30px);
+    transform-origin: 0 0 0;
+    transition: .5s transform .3s;
+}
+
+.checked svg #grp1 #oval2 {
+    transform: scale(0) translate(10px, -50px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform .3s;
+}
+
+.checked svg #grp2 {
+    opacity: 1;
+    transition: .1s all .3s;
+}
+
+.checked svg #grp2 #oval1 {
+    transform: scale(0) translate(30px, -15px);
+    transform-origin: 0 0 0;
+    transition: .5s transform .3s;
+}
+
+.checked svg #grp2 #oval2 {
+    transform: scale(0) translate(60px, -15px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform .3s;
+}
+
+.checked svg #grp3 {
+    opacity: 1;
+    transition: .1s all .3s;
+}
+
+.checked svg #grp3 #oval1 {
+    transform: scale(0) translate(30px, 0px);
+    transform-origin: 0 0 0;
+    transition: .5s transform .3s;
+}
+
+.checked svg #grp3 #oval2 {
+    transform: scale(0) translate(60px, 10px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform .3s;
+}
+
+.checked svg #grp4 {
+    opacity: 1;
+    transition: .1s all .3s;
+}
+
+.checked svg #grp4 #oval1 {
+    transform: scale(0) translate(30px, 15px);
+    transform-origin: 0 0 0;
+    transition: .5s transform .3s;
+}
+
+.checked svg #grp4 #oval2 {
+    transform: scale(0) translate(40px, 50px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform .3s;
+}
+
+.checked svg #grp5 {
+    opacity: 1;
+    transition: .1s all .3s;
+}
+
+.checked svg #grp5 #oval1 {
+    transform: scale(0) translate(-10px, 20px);
+    transform-origin: 0 0 0;
+    transition: .5s transform .3s;
+}
+
+.checked svg #grp5 #oval2 {
+    transform: scale(0) translate(-60px, 30px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform .3s;
+}
+
+.checked svg #grp6 {
+    opacity: 1;
+    transition: .1s all .3s;
+}
+
+.checked svg #grp6 #oval1 {
+    transform: scale(0) translate(-30px, 0px);
+    transform-origin: 0 0 0;
+    transition: .5s transform .3s;
+}
+
+.checked svg #grp6 #oval2 {
+    transform: scale(0) translate(-60px, -5px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform .3s;
+}
+
+.checked svg #grp7 {
+    opacity: 1;
+    transition: .1s all .3s;
+}
+
+.checked svg #grp7 #oval1 {
+    transform: scale(0) translate(-30px, -15px);
+    transform-origin: 0 0 0;
+    transition: .5s transform .3s;
+}
+
+.checked svg #grp7 #oval2 {
+    transform: scale(0) translate(-55px, -30px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform .3s;
+}
+
+.checked svg #grp2 {
+    opacity: 1;
+    transition: .1s opacity .3s;
+}
+
+.checked svg #grp3 {
+    opacity: 1;
+    transition: .1s opacity .3s;
+}
+
+.checked svg #grp4 {
+    opacity: 1;
+    transition: .1s opacity .3s;
+}
+
+.checked svg #grp5 {
+    opacity: 1;
+    transition: .1s opacity .3s;
+}
+
+.checked svg #grp6 {
+    opacity: 1;
+    transition: .1s opacity .3s;
+}
+
+.checked svg #grp7 {
+    opacity: 1;
+    transition: .1s opacity .3s;
+}
+
+@keyframes animateCircle {
+    40% {
+        transform: scale(10);
+        opacity: 1;
+        fill: #e9b149;
+    }
+    55% {
+        transform: scale(11);
+        opacity: 1;
+        fill: #ebbb60;
+    }
+    65% {
+        transform: scale(12);
+        opacity: 1;
+        fill: #eec477;
+    }
+    75% {
+        transform: scale(13);
+        opacity: 1;
+        fill: transparent;
+        stroke: #f1ce8e;
+        stroke-width: .5;
+    }
+    85% {
+        transform: scale(17);
+        opacity: 1;
+        fill: transparent;
+        stroke: #f4d8a4;
+        stroke-width: .2;
+    }
+    95% {
+        transform: scale(18);
+        opacity: 1;
+        fill: transparent;
+        stroke: #f7e2bb;
+        stroke-width: .1;
+    }
+    100% {
+        transform: scale(19);
+        opacity: 1;
+        fill: transparent;
+        stroke: #f9ebd2;
+        stroke-width: 0;
+    }
+}
+
+@keyframes animateHeart {
+    0% {
+        transform: scale(0.2);
+    }
+    40% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
