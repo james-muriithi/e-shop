@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap');
+.carousel-inner img {
+    width: 100%!important;
+    height: 400px;
+}
+
+.title-divider h4 {
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #737373;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+.title-divider h4 span {
+    background: #fff;
+    padding: 0 10px;
+}
+
+button.btn {
+    background: #339933;
+    color: #f4f4f4;
+}

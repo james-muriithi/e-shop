@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Navbar from "../components/navbar/Navbar"
+import Navbar from "../navbar/Navbar"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         <>
             <div>
                 <Navbar />
-                
+
                 <main>{children}</main>
 
                 <footer>

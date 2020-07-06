@@ -1,0 +1,28 @@
+.header__cart a span {
+    height: 13px;
+    width: 13px;
+    background: #7fad39;
+    font-size: 10px;
+    color: #ffffff;
+    line-height: 13px;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    top: -10px;
+    right: 0px;
+}
+
+.header__cart a i {
+    font-size: 18px;
+    color: #1c1c1c;
+}
+
+.header__cart a {
+    position: relative;
+}
+
+.header__cart {
+    margin-top: -10px;
+}

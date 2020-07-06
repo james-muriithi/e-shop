@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
+import { Link } from "gatsby";
 import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem,
-    NavbarText
+    DropdownItem
 } from 'reactstrap';
+
+import './Navbar.css';
 
 const NavBar = (props) => {
     const [ isOpen, setIsOpen ] = useState(false);
@@ -22,15 +22,14 @@ const NavBar = (props) => {
     return (
         <div>
             <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
-                <NavbarToggler onClick={toggle} />
+                <Link to="/" className="navbar-brand">E-Shop</Link>
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
+                    <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
+                            <Link to="/" className="nav-link">Contact</Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                            <Link to="/" className="nav-link">About</Link>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
@@ -38,20 +37,30 @@ const NavBar = (props) => {
                             </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
-                                    Option 1
+                                    Item 1
                                 </DropdownItem>
                                 <DropdownItem>
-                                    Option 2
+                                    Item 2
                                 </DropdownItem>
                                 <DropdownItem divider />
                                 <DropdownItem>
-                                    Reset
+                                    something else
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                     </Nav>
-                    <NavbarText>Simple Text</NavbarText>
                 </Collapse>
+                <div className="header__cart d-flex">
+                    <Link to="#" className="nav-link">
+                        <i class="fa fa-heart"></i>
+                        <span>2</span>
+                    </Link>
+                    <Link to="#" className="nav-link">
+                        <i className="fa fa-shopping-bag"></i>
+                        <span>3</span>
+                    </Link>
+                </div>
+                <NavbarToggler onClick={toggle} />
             </Navbar>
         </div>
     );
