@@ -1,7 +1,7 @@
 .header__cart a span {
-    height: 13px;
-    width: 13px;
-    background: #7fad39;
+    height: 15px;
+    width: 15px;
+    background: #e7ab3c;
     font-size: 10px;
     color: #ffffff;
     line-height: 13px;
@@ -11,7 +11,7 @@
     border-radius: 50%;
     position: relative;
     top: -10px;
-    right: 0px;
+    right: 2px;
 }
 
 .header__cart a i {
@@ -25,4 +25,10 @@
 
 .header__cart {
     margin-top: -10px;
+}
+
+@media all and (max-width: 576px) {
+    .header__cart {
+        margin-top: 0px;
+    }
 }

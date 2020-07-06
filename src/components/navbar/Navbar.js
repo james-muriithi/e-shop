@@ -21,7 +21,7 @@ const NavBar = (props) => {
 
     return (
         <div>
-            <Navbar color="light" light expand="md">
+            <Navbar color="light" light expand="md" fixed>
                 <Link to="/" className="navbar-brand">E-Shop</Link>
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
@@ -50,7 +50,7 @@ const NavBar = (props) => {
                         </UncontrolledDropdown>
                     </Nav>
                 </Collapse>
-                <div className="header__cart d-flex">
+                <div className="header__cart d-flex ml-auto">
                     <Link to="#" className="nav-link">
                         <i class="fa fa-heart"></i>
                         <span>2</span>
