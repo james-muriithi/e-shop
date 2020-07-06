@@ -21,12 +21,10 @@ const items = [
     {
         src: 'slider02.jpg',
         altText: 'Slide 2',
-        caption: 'Slide 2'
     },
     {
         src: 'slider03.jpg',
         altText: 'Slide 3',
-        caption: 'Slide 3'
     }
 ];
 

@@ -1,0 +1,34 @@
+.benefit-items {
+    border: 1px solid #ebebeb;
+    margin-top: 45px;
+}
+
+.benefit-items .single-benefit {
+    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-left: 55px;
+    padding-right: 55px;
+    border-right: 1px solid #F3F4F0;
+}
+
+.benefit-items .single-benefit .sb-icon {
+    float: left;
+    margin-right: 20px;
+}
+
+.benefit-items .single-benefit .sb-text {
+    display: table;
+}
+
+.benefit-items .single-benefit .sb-text h6 {
+    color: #252525;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.benefit-items .single-benefit .sb-text p {
+    margin-bottom: 0;
+    color: #252525;
+    line-height: 20px;
+}

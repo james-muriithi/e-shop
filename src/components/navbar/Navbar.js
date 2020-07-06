@@ -13,7 +13,7 @@ import {
 } from 'reactstrap';
 
 import product1 from '../../images/products/product-1.jpg';
-import product2 from '../../images/products/product-2.jpg';
+import product2 from '../../images/products/product-5.jpg';
 
 import './Navbar.css';
 
@@ -73,7 +73,7 @@ const NavBar = (props) => {
                                             </td>
                                             <td className="si-text">
                                                 <div className="product-selected">
-                                                    <p>$60.00 x 1</p>
+                                                    <p>Ksh. 200 x 1</p>
                                                     <h6>Sweater</h6>
                                                 </div>
                                             </td>
@@ -87,8 +87,8 @@ const NavBar = (props) => {
                                             </td>
                                             <td className="si-text">
                                                 <div className="product-selected">
-                                                    <p>$60.00 x 1</p>
-                                                    <h6>Sweater (Grey)</h6>
+                                                    <p>Ksh 200 x 1</p>
+                                                    <h6>Cape</h6>
                                                 </div>
                                             </td>
                                             <td className="si-close">
