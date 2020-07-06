@@ -4,8 +4,10 @@
     src: url("../../fonts/Kingsman.ttf") format("opentype");
 }
 
+html,
 body {
-    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
 }
 
 .navbar-brand {

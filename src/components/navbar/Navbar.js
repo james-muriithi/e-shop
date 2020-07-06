@@ -12,6 +12,9 @@ import {
     DropdownItem
 } from 'reactstrap';
 
+import product1 from '../../images/products/product-1.jpg';
+import product2 from '../../images/products/product-2.jpg';
+
 import './Navbar.css';
 
 const NavBar = (props) => {
@@ -22,7 +25,7 @@ const NavBar = (props) => {
     return (
         <div>
             <Navbar color="light" light expand="md" fixed>
-                <Link to="/" className="navbar-brand">e-shop</Link>
+                <Link to="/" className="navbar-brand"><span>e</span>-shop</Link>
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
@@ -53,11 +56,56 @@ const NavBar = (props) => {
                 <div className="header__cart d-flex ml-auto">
                     <Link to="#" className="nav-link">
                         <i className="fa fa-heart"></i>
-                        <span>2</span>
+                        <span className="number">2</span>
                     </Link>
-                    <Link to="#" className="nav-link">
-                        <i className="fa fa-shopping-bag"></i>
-                        <span>3</span>
+                    <Link to="#" className="nav-link cart-icon">
+                        <div>
+                            <i className="fa fa-shopping-bag"></i>
+                            <span className="number">3</span>
+                        </div>
+                        <div className="cart-hover">
+                            <div className="select-items">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td className="si-pic">
+                                                <img src={product1} alt="" />
+                                            </td>
+                                            <td className="si-text">
+                                                <div className="product-selected">
+                                                    <p>$60.00 x 1</p>
+                                                    <h6>Brown Sweater</h6>
+                                                </div>
+                                            </td>
+                                            <td className="si-close">
+                                                <i className="fa fa-close"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td className="si-pic">
+                                                <img src={product2} alt="" />
+                                            </td>
+                                            <td className="si-text">
+                                                <div className="product-selected">
+                                                    <p>$60.00 x 1</p>
+                                                    <h6>Sweater (Grey)</h6>
+                                                </div>
+                                            </td>
+                                            <td className="si-close">
+                                                <i className="fa fa-close"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div className="select-total">
+                                <span>total:</span>
+                                <h5>$120.00</h5>
+                            </div>
+                            <div className="select-button">
+                                <a href="#" className="primary-btn checkout-btn">CHECK OUT</a>
+                            </div>
+                        </div>
                     </Link>
                 </div>
                 <NavbarToggler onClick={toggle} />

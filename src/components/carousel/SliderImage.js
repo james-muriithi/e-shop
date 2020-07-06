@@ -12,7 +12,7 @@ const SliderImage = ({src, alt}) => {
             relativePath
             name
             childImageSharp{
-              fluid(maxWidth: 1100, quality : 100) {
+              fluid(maxWidth: 1000, quality : 100) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -24,9 +24,9 @@ const SliderImage = ({src, alt}) => {
 
   const Image = styled(Img)`
     width: 100%;
-    height: 360px!important;
+    height: 390px!important;
     @media (max-width: 576px) {
-      height: 300px;
+      height: 250px!important;
     }`
 
   const image = data.images.edges.find(n=>{
@@ -40,7 +40,8 @@ const SliderImage = ({src, alt}) => {
   return <Image
     alt={alt}
     fluid={image.node.childImageSharp.fluid}
-    objectFit="contain" />
+    objectFit="contain"
+    objectPosition="50% 50%" />
 }
 
 export default SliderImage
