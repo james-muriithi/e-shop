@@ -72,6 +72,19 @@ export default function Products() {
             ]
         },
         {
+            src: require('../../images/products/product-10.jpg'),
+            name: 'Sneakers',
+            id: uuidv4(),
+            price: 1000,
+            color: 'yellow and white',
+            description: "A sweater that keeps you warm.",
+            sizes: [
+                'xxl',
+                'xxl',
+                'xl'
+            ]
+        },
+        {
             src: require('../../images/products/man-3.jpg'),
             name: 'Sweater',
             id: uuidv4(),
@@ -103,8 +116,7 @@ export default function Products() {
             height: 2px;
             background: #171717;
             content: "";
-        }
-    `
+        }`
 
     return (
         <Container style={{ marginTop: "40px" }}>

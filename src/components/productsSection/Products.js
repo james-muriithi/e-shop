@@ -84,6 +84,19 @@ export default function Products() {
                 'xl'
             ]
         },
+        {
+            src: require('../../images/products/product-11.jpg'),
+            name: 'Sneakers',
+            id: uuidv4(),
+            price: 2000,
+            color: 'yellow and white',
+            description: "A sweater that keeps you warm.",
+            sizes: [
+                'xxl',
+                'xxl',
+                'xl'
+            ]
+        },
     ];
 
     const Heading = styled.h3`

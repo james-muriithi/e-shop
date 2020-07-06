@@ -1,0 +1,66 @@
+.banner-section {
+    padding: 80px 50px;
+}
+
+.single-banner {
+    position: relative;
+    z-index: 1;
+}
+
+.single-banner:hover::before {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.single-banner::before {
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    border: 13px solid #ffffff;
+    content: "";
+    opacity: 0.3;
+    width: calc(100% - 70px);
+    height: calc(100% - 60px);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.single-banner img {
+    min-width: 100%;
+}
+
+.single-banner .inner-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.single-banner .inner-text h4 {
+    color: #252525;
+    font-weight: 700;
+    padding: 11px 28px;
+    background: #ffffff;
+    border-radius: 2px;
+}
+
+@media (max-width: 576px) {
+    .banner-section {
+        padding: 50px 30px;
+    }
+}

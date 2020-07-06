@@ -9,6 +9,7 @@ import HomeCarousel from "../components/carousel/HomeCarousel"
 import Products from "../components/productsSection/Products";
 import Benefits from '../components/benefits/Benefits';
 import Recommended from '../components/recommendationSector/Recommended';
+import Categories from '../components/categorySection/Categories';
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <HomeCarousel />
     <Benefits />
     <Products />
+    <Categories />
     <Recommended />
   </Layout>
 )
