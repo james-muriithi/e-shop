@@ -29,9 +29,9 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#000000`,
-        theme_color: `#ff7d1a`,
+        theme_color: `#e7ab3c`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/shoppingcart.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
