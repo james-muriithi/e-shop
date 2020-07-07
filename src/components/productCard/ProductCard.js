@@ -20,7 +20,7 @@ export default function ProductCard({product, ...props}) {
                             <Link to="#"><i className="fa fa-shopping-bag"></i></Link>
                         </li>
                         <li className="quick-view d-md-none">
-                            <Link to="#">+ Quick View</Link>
+                            <Link to="#">+ View</Link>
                         </li>
                         <li className="w-icon">
                             <Link to="#"><i className="fa fa-share"></i></Link>

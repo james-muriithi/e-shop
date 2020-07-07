@@ -124,7 +124,7 @@ export default function Products() {
             <Heading>Clothing</Heading>
             <Row>
                 {items.map(item =>(
-                    <ProductCard key={item.id} product={item} lg="2" md="4" sm="6" />
+                    <ProductCard key={item.id} product={item} lg="2" md="4" sm="6" xs="6" />
                 ))}
             </Row>
         </Container>
