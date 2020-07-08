@@ -13,6 +13,8 @@ export default function Products() {
             price: 200,
             description: "A sweater that keeps you warm.",
             color: 'yellow',
+            label: 'New',
+            rating: '4.5',
             sizes: [
                 'xxl',
                 'xxl',
