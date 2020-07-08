@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import Helmet from 'react-helmet'
+import PropTypes from "prop-types"
+import React from "react"
+import Helmet from "react-helmet"
 
 const Twitter = ({ type, username, title, desc, image }) => (
   <Helmet>
@@ -24,6 +24,6 @@ Twitter.propTypes = {
 }
 
 Twitter.defaultProps = {
-  type: 'summary_large_image',
+  type: "summary_large_image",
   username: null,
 }

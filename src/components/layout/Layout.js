@@ -6,22 +6,21 @@ import "./layout.css"
 import Footer from "../footer/Footer"
 
 const Layout = ({ children }) => {
+  return (
+    <>
+      <div style={{ overflowX: "hidden" }}>
+        <Navbar />
 
-    return (
-        <>
-            <div style={{overflowX: "hidden"}}>
-                <Navbar />
+        <main>{children}</main>
 
-                <main>{children}</main>
-
-                <Footer />
-            </div>
-        </>
-    )
+        <Footer />
+      </div>
+    </>
+  )
 }
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

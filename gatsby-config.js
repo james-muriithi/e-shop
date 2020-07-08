@@ -3,13 +3,13 @@ module.exports = {
     title: `e-shop`,
     description: `Simple e-commerce website in react.`,
     author: `@james-muriithi`,
-    siteUrl: 'https://my-online-shop.netlify.app/',
+    siteUrl: "https://my-online-shop.netlify.app/",
     siteLanguage: `en`,
     ogLanguage: `en`,
     headline: `E-Shop`,
     twitter: `@jam_es_muriithi`,
     facebook: `james-muriithi`,
-    banner: `/preview.png`
+    banner: `/preview.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -1,18 +1,18 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components";
+import styled from "styled-components"
 import Img from "gatsby-image"
 
-const SliderImage = ({src, alt}) => {
+const SliderImage = ({ src, alt }) => {
   const data = useStaticQuery(graphql`
     query {
-      images : allFile{
+      images: allFile {
         edges {
-          node{
+          node {
             relativePath
             name
-            childImageSharp{
-              fluid(maxWidth: 1200, quality : 100) {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
@@ -24,24 +24,28 @@ const SliderImage = ({src, alt}) => {
 
   const Image = styled(Img)`
     width: 100%;
-    height: 390px!important;
+    height: 390px !important;
     @media (max-width: 576px) {
-      height: 250px!important;
-    }`
+      height: 250px !important;
+    }
+  `
 
-  const image = data.images.edges.find(n=>{
+  const image = data.images.edges.find(n => {
     return n.node.relativePath.includes(src)
   })
 
   if (!image) {
-    return null;
+    return null
   }
 
-  return <Image
-    alt={alt}
-    fluid={image.node.childImageSharp.fluid}
-    objectFit="contain"
-    objectPosition="50% 50%" />
+  return (
+    <Image
+      alt={alt}
+      fluid={image.node.childImageSharp.fluid}
+      objectFit="contain"
+      objectPosition="50% 50%"
+    />
+  )
 }
 
 export default SliderImage

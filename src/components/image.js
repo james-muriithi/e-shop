@@ -18,7 +18,7 @@ const Image = () => {
     query {
       placeholderImage: file(relativePath: { eq: "slider01.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1100, quality : 100) {
+          fluid(maxWidth: 1100, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,11 +26,14 @@ const Image = () => {
     }
   `)
 
-  return <Img 
-  fluid={data.placeholderImage.childImageSharp.fluid} 
-    style={{ height: "300px", marginBottom: "30px" }}
-    objectFit="contain"
-  className={data.placeholderImage.childImageSharp.fluid.aspectRatio} />
+  return (
+    <Img
+      fluid={data.placeholderImage.childImageSharp.fluid}
+      style={{ height: "300px", marginBottom: "30px" }}
+      objectFit="contain"
+      className={data.placeholderImage.childImageSharp.fluid.aspectRatio}
+    />
+  )
 }
 
 export default Image
