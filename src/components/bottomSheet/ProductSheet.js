@@ -1,5 +1,5 @@
 import React from 'react'
-import SwipeableBottomSheet from 'react-swipeable-bottom-sheet';
+import SwipeableBottomSheet from '../react-swipeable-bottom-sheet/SwipeableBottomSheet';
 
 export default function ProductSheet(props) {
     return (
