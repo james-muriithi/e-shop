@@ -20,6 +20,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-swipeable-bottom-sheet": "^1.1.1",
     "reactstrap": "^8.5.1",
     "styled-components": "^5.1.1",
     "uuid": "^8.2.0"

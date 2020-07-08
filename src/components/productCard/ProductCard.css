@@ -3,12 +3,12 @@
     }
     
     .product-item:hover .pi-pic .icon {
-        top: 15px;
+        top: 10px;
         opacity: 1;
     }
     
     .product-item:hover .pi-pic ul {
-        bottom: 0;
+        bottom: -20px;
     }
     
     .product-item .pi-pic {
@@ -36,8 +36,8 @@
     }
     
     .product-item .pi-pic .icon.like {
-        top: 5px;
-        right: 6px;
+        top: 4px;
+        right: 4px;
     }
     
     .product-item .pi-pic .icon {
@@ -85,8 +85,9 @@
     }
     
     .product-item .pi-text {
-        text-align: center;
-        padding-top: 26px;
+        text-align: left;
+        padding-left: 9px;
+        padding-top: 18px;
     }
     
     .product-item .pi-text .catagory-name {
