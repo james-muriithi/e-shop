@@ -7,7 +7,7 @@ export default function Benefits() {
     return (
         <div className="benefit-items mx-3">
             <Row>
-                <Col lg="4">
+                <Col md="4">
                     <div className="single-benefit">
                         <div className="sb-icon">
                             <img src={require('../../images/icons/icon-1.png')} alt="" />
@@ -18,7 +18,7 @@ export default function Benefits() {
                         </div>
                     </div>
                 </Col>
-                <Col lg="4">
+                <Col md="4">
                     <div className="single-benefit">
                         <div className="sb-icon">
                             <img src={require('../../images/icons/icon-2.png')} alt="" />
@@ -29,7 +29,7 @@ export default function Benefits() {
                         </div>
                     </div>
                 </Col>
-                <Col lg="4">
+                <Col md="4">
                     <div className="single-benefit">
                         <div className="sb-icon">
                             <img src={require('../../images/icons/icon-3.png')} alt="" />

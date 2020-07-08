@@ -4,14 +4,17 @@ import { Link } from "gatsby";
 
 import './ProductCard.css';
 import Like from '../favourite/Like';
-import product4 from "../../images/products/product-4.jpg";
+import placeholder from "../../images/products/placeholder.png";
+import 'lazysizes';
+import 'lazysizes/plugins/attrchange/ls.attrchange';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 export default function ProductCard({product, ...props}) {
     return (
         <Col {...props}>
             <div className="product-item">
                 <div className="pi-pic">
-                    <img src={product.src ? product.src : product4} alt={product.name} />
+                    <img data-src={product.src ? product.src : placeholder} alt={product.name} src="https://res.cloudinary.com/james-m/image/upload/a_hflip,c_pad,h_303,w_270/v1594207296/1612585_j6ym3x.webp"  className="lazyload" />
                     <div className="icon like">
                         <Like />
                     </div>
