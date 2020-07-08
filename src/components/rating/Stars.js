@@ -5,13 +5,12 @@ import { Link } from 'gatsby';
 export default function Stars({rating}) {
     // total number of stars
     const starTotal = 5;
-    rating = rating ? rating : (Math.random() * (5 - 1)).toPrecision(1);
+    rating = rating ? rating : (Math.random() * (5 - 1)).toPrecision(2);
     const starPercentage = (rating / starTotal) * 100;
-    console.log(rating);
     return (
         <div className="d-flex">
-            <div class="stars-outer">
-                <div class="stars-inner" style={{ width: `${(Math.round(starPercentage / 10) * 10)}%`}}></div>
+            <div className="stars-outer">
+                <div className="stars-inner" style={{ width: `${(Math.round(starPercentage / 10) * 10)}%`}}></div>
             </div>
             <span className="total_reviews">
                 <Link to="/">({Math.floor(Math.random() * (10 + 1)) + 1})</Link>

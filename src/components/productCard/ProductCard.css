@@ -1,131 +1,187 @@
-    .product-item {
-        margin-bottom: 26px;
-    }
-    
-    .product-item:hover .pi-pic .icon {
-        top: 10px;
-        opacity: 1;
-    }
-    
-    .product-item:hover .pi-pic ul {
-        bottom: -20px;
-    }
-    
-    .product-item .pi-pic {
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .product-item .pi-pic img {
-        min-width: 100%;
-    }
-    
-    .product-item .pi-pic .sale {
-        color: #ffffff;
-        font-size: 10px;
-        background: #76BC42;
-        position: absolute;
-        left: 0;
-        top: 20px;
-        padding: 5px 10px;
-        text-transform: uppercase;
-    }
-    
-    .product-item .pi-pic .sale.pp-sale {
-        background: #e7ab3c;
-    }
-    
-    .product-item .pi-pic .icon.like {
-        top: 4px;
-        right: 4px;
-    }
-    
-    .product-item .pi-pic .icon {
-        font-size: 20px;
-        color: #252525;
-        position: absolute;
-        right: 21px;
-        top: -15px;
-        cursor: pointer;
-        -webkit-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
-        opacity: 0;
-    }
-    
-    .product-item .pi-pic ul {
-        margin-inline-start: 0px;
-        position: absolute;
-        left: 0;
-        bottom: -90px;
-        -webkit-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .product-item .pi-pic ul li {
-        list-style: none;
-        display: inline-block;
-        background: #ffffff;
-    }
-    
-    .product-item .pi-pic ul li.w-icon.active a {
-        background: #e7ab3c;
-        color: #ffffff;
-    }
-    
+.product-item {
+    margin-bottom: 26px;
+}
+
+.product-item:hover .pi-pic .icon {
+    top: 10px;
+    opacity: 1;
+}
+
+.product-item:hover .pi-pic ul {
+    bottom: -20px;
+}
+
+.product-item .pi-pic {
+    overflow: hidden;
+    position: relative;
+}
+
+.product-item .pi-pic img {
+    min-width: 100%;
+}
+
+.product-item .pi-pic .sale {
+    color: #ffffff;
+    font-size: 10px;
+    background: #76BC42;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.product-item .pi-pic .sale.pp-sale {
+    background: #e7ab3c;
+}
+
+.product-item .pi-pic .icon.like {
+    top: 4px;
+    right: 4px;
+}
+
+.product-item .pi-pic .icon {
+    font-size: 20px;
+    color: #252525;
+    position: absolute;
+    right: 21px;
+    top: -15px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.product-item .pi-pic ul {
+    margin-inline-start: 0px;
+    position: absolute;
+    left: 0;
+    bottom: -90px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+.product-item .pi-pic ul li {
+    list-style: none;
+    display: inline-block;
+    background: #ffffff;
+}
+
+.product-item .pi-pic ul li.w-icon.active a {
+    background: #e7ab3c;
+    color: #ffffff;
+}
+
+.product-item .pi-pic ul li a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #252525;
+    display: block;
+    padding: 16px 18px 12px 19px;
+}
+
+.product-item .pi-text {
+    text-align: left;
+    padding-left: 9px;
+    padding-top: 18px;
+}
+
+.product-item .pi-text .catagory-name {
+    font-size: 10px;
+    color: #b2b2b2;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.product-item .pi-text a {
+    display: block;
+}
+
+.product-item .pi-text a h5 {
+    color: #252525;
+}
+
+.product-item .pi-text .product-price {
+    color: #e7ab3c;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.product-item .pi-text .product-price span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #b2b2b2;
+    text-decoration: line-through;
+}
+
+ul.product_sizes {
+    list-style: none;
+    display: flex;
+    margin-inline-start: 5px;
+}
+
+ul.product_sizes li {
+    border: 1px solid #ebebeb;
+    font-weight: 650;
+    border-radius: 10px;
+    min-width: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ul.product_sizes li:hover {
+    background: #efefef;
+}
+
+div.product_quantity button.btn {
+    color: #212529;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 55px;
+    height: 50px;
+    outline: none;
+}
+
+.btn-outline-warning:not(:disabled):not(.disabled).active,
+.btn-outline-warning:not(:disabled):not(.disabled):active {
+    background: #efefef;
+    color: #212529;
+}
+
+div.product_quantity input {
+    border-radius: 10px;
+    height: 50px;
+}
+
+div.add_to_cart .primary-btn {
+    background: #e7ab3c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    padding: 10px 20px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    outline: none;
+}
+
+div.add_to_cart .btn:active {
+    outline: none;
+}
+
+@media (max-width: 767px) {
     .product-item .pi-pic ul li a {
-        font-size: 16px;
-        font-weight: 700;
-        color: #252525;
-        display: block;
-        padding: 16px 18px 12px 19px;
+        padding: 16px 13px 12px 13px;
     }
-    
-    .product-item .pi-text {
-        text-align: left;
-        padding-left: 9px;
-        padding-top: 18px;
+    .product-item .pi-pic ul li:nth-child(even) a {
+        padding: 16px 8px 12px 8px;
+        font-size: 13px;
     }
-    
-    .product-item .pi-text .catagory-name {
-        font-size: 10px;
-        color: #b2b2b2;
-        font-weight: 700;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-    
-    .product-item .pi-text a {
-        display: block;
-    }
-    
-    .product-item .pi-text a h5 {
-        color: #252525;
-    }
-    
-    .product-item .pi-text .product-price {
-        color: #e7ab3c;
-        font-size: 20px;
-        font-weight: 700;
-    }
-    
-    .product-item .pi-text .product-price span {
-        font-size: 14px;
-        font-weight: 400;
-        color: #b2b2b2;
-        text-decoration: line-through;
-    }
-    
-    @media (max-width: 767px) {
-        .product-item .pi-pic ul li a {
-            padding: 16px 13px 12px 13px;
-        }
-        .product-item .pi-pic ul li:nth-child(even) a {
-            padding: 16px 8px 12px 8px;
-            font-size: 13px;
-        }
-    }
+}
