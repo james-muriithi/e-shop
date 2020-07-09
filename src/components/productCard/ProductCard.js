@@ -1,16 +1,18 @@
 import React, { useState } from "react"
 import { Col } from "reactstrap"
 import { Link } from "gatsby"
-
-import "./ProductCard.css"
-import Like from "../favourite/Like"
 import "lazysizes"
 import "lazysizes/plugins/attrchange/ls.attrchange"
 import "lazysizes/plugins/parent-fit/ls.parent-fit"
+import { connect } from "react-redux";
+
+import "./ProductCard.css"
+import Like from "../favourite/Like"
 import ProductSheet from "../bottomSheet/ProductSheet"
 import Stars from "../rating/Stars"
+import { addToCart } from "../../actions/cartActions";
 
-export default function ProductCard({ product, ...props }) {
+function ProductCard({ product, addToCart, ...props }) {
   const [open, setOpen] = useState(false)
   const [quantity, setQuantity] = useState(1)
 
@@ -51,7 +53,10 @@ export default function ProductCard({ product, ...props }) {
           </div>
           <ul>
             <li className="w-icon active">
-              <Link to="#">
+              <Link to="#" onClick={(e) =>{
+                e.preventDefault();
+                addToCart(product)
+              }}>
                 <i className="fa fa-shopping-bag"></i>
               </Link>
             </li>
@@ -130,3 +135,10 @@ export default function ProductCard({ product, ...props }) {
     </Col>
   )
 }
+
+// const mapStateToProps = state => ({
+//   cartItems: state.cart.cartItems,
+//   total: state.cart.total
+// })
+
+export default connect(null, {addToCart})(ProductCard);

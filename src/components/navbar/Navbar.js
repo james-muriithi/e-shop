@@ -11,13 +11,16 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap"
+import { connect } from "react-redux";
 
 import product1 from "../../images/products/product-1.jpg"
 import product2 from "../../images/products/product-5.jpg"
+import emptyCartSvg from '../../images/empty_cart.svg';
 
 import "./Navbar.css"
 
 const NavBar = props => {
+  console.log(props);
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
@@ -61,11 +64,12 @@ const NavBar = props => {
           <div to="#" className="nav-link cart-icon">
             <div>
               <i className="fa fa-shopping-bag"></i>
-              <span className="number">3</span>
+              
+              {props.cartItems.length > 0 && <span className="number">{props.cartItems.length}</span>}
             </div>
             <div className="cart-hover">
               <div className="select-items">
-                <table>
+                {props.cartItems.length > 0 ? <table>
                   <tbody>
                     <tr>
                       <td className="si-pic">
@@ -96,11 +100,16 @@ const NavBar = props => {
                       </td>
                     </tr>
                   </tbody>
-                </table>
+                </table> : 
+                <div className="text-center">
+                    <img src={emptyCartSvg} alt="empty cart" />
+                    <p className="mt-2 mb-3">Your shopping cart is empty.</p>
+                </div>
+                }
               </div>
               <div className="select-total">
                 <span>total:</span>
-                <h5>$120.00</h5>
+                <h5>Ksh. {props.total? props.total : 0}</h5>
               </div>
               <div className="select-button">
                 <Link to="/" className="primary-btn checkout-btn">
@@ -116,4 +125,11 @@ const NavBar = props => {
   )
 }
 
-export default NavBar
+const mapStateToProps = state => {
+  return {
+    cartItems : state.cart.cartItems,
+    total: state.cart.total
+  }
+}
+
+export default connect(mapStateToProps,null)(NavBar)
