@@ -5,12 +5,14 @@ import rootReducer from './reducers'
 
 const initialState = {}
 const middleware = [thunk]
+const globalWindow = typeof window !== "undefined" && window
 
 const store = createStore(
     rootReducer,
     initialState,
     compose(
-        applyMiddleware(...middleware)
+        applyMiddleware(...middleware),
+        globalWindow && globalWindow.__REDUX_DEVTOOLS_EXTENSION__ && globalWindow.__REDUX_DEVTOOLS_EXTENSION__()
     )
 )
 

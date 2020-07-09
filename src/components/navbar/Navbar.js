@@ -71,34 +71,24 @@ const NavBar = props => {
               <div className="select-items">
                 {props.cartItems.length > 0 ? <table>
                   <tbody>
-                    <tr>
-                      <td className="si-pic">
-                        <img src={product1} alt="" />
-                      </td>
-                      <td className="si-text">
-                        <div className="product-selected">
-                          <p>Ksh. 200 x 1</p>
-                          <h6>Sweater</h6>
-                        </div>
-                      </td>
-                      <td className="si-close">
-                        <i className="fa fa-close"></i>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="si-pic">
-                        <img src={product2} alt="" />
-                      </td>
-                      <td className="si-text">
-                        <div className="product-selected">
-                          <p>Ksh 200 x 1</p>
-                          <h6>Cape</h6>
-                        </div>
-                      </td>
-                      <td className="si-close">
-                        <i className="fa fa-close"></i>
-                      </td>
-                    </tr>
+                    {
+                      props.cartItems.map((item, index) =>(
+                        <tr key={index}>
+                          <td className="si-pic">
+                            <img src={item.src} alt="" />
+                          </td>
+                          <td className="si-text">
+                            <div className="product-selected">
+                              <p>Ksh. {item.price} x {item.quantity}</p>
+                              <h6>{item.name}</h6>
+                            </div>
+                          </td>
+                          <td className="si-close">
+                            <i className="fa fa-close"></i>
+                          </td>
+                        </tr>
+                      ))
+                    }
                   </tbody>
                 </table> : 
                 <div className="text-center">
