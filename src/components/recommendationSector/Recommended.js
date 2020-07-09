@@ -1,6 +1,5 @@
 import React from "react"
 import { Container, Row } from "reactstrap"
-import { v4 as uuidv4 } from "uuid"
 import ProductCard from "../productCard/ProductCard"
 import styled from "styled-components"
 
@@ -9,7 +8,7 @@ export default function Products() {
     {
       src: require("../../images/products/product-7.jpg"),
       name: "Sweater",
-      id: uuidv4(),
+      id: 8,
       price: 1000,
       description: "A sweater that keeps you warm.",
       color: "yellow",
@@ -18,7 +17,7 @@ export default function Products() {
     {
       src: require("../../images/products/product-8.jpg"),
       name: "Sweater",
-      id: uuidv4(),
+      id: 9,
       price: 700,
       color: "grey",
       description: "A sweater that keeps you warm.",
@@ -27,7 +26,7 @@ export default function Products() {
     {
       src: require("../../images/products/product-9.jpg"),
       name: "Jacket",
-      id: uuidv4(),
+      id: 10,
       price: 1500,
       color: "light green",
       description: "A sweater that keeps you warm.",
@@ -36,7 +35,7 @@ export default function Products() {
     {
       src: require("../../images/products/man-4.jpg"),
       name: "Scarf",
-      id: uuidv4(),
+      id: 11,
       price: 600,
       color: "light green",
       description: "A scarf that keeps you warm.",
@@ -45,7 +44,7 @@ export default function Products() {
     {
       src: require("../../images/products/women-4.jpg"),
       name: "Cape",
-      id: uuidv4(),
+      id: 12,
       color: "yellow",
       price: 300,
       description: "A sweater that keeps you warm.",
@@ -54,7 +53,7 @@ export default function Products() {
     {
       src: require("../../images/products/product-10.jpg"),
       name: "Sneakers",
-      id: uuidv4(),
+      id: 13,
       price: 1000,
       color: "yellow and white",
       description: "A sweater that keeps you warm.",
@@ -63,7 +62,7 @@ export default function Products() {
     {
       src: require("../../images/products/man-3.jpg"),
       name: "Sweater",
-      id: uuidv4(),
+      id: 14,
       price: 500,
       color: "yellow and white",
       description: "A sweater that keeps you warm.",

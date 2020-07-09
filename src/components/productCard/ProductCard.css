@@ -172,8 +172,11 @@ div.add_to_cart .primary-btn {
     outline: none;
 }
 
+.btn:focus,
 div.add_to_cart .btn:active {
     outline: none;
+    border-width: 1px;
+    box-shadow: 0 0 0 0.1rem rgba(255, 193, 7, .5)!important;
 }
 
 @media (max-width: 767px) {
