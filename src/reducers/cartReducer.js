@@ -14,16 +14,14 @@ const cartReducer = (state = initialState, action) => {
             let existed_item = state.cartItems.find(item => action.item.id === item.id)
 
             if (existed_item) {
-                console.log(action.item.quantity);
-                action.item.quantity = action.item.quantity + 1 
+                console.log(existed_item);
+                existed_item.quantity += 1 
                 return {
                     ...state,
                     total: newTotal
                 }
             }
-            
             action.item.quantity = action.item.quantity ? action.item.quantity: 1;
-
             return {
                 cartItems: [
                     action.item,
