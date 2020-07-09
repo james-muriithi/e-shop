@@ -24,7 +24,7 @@ const NavBar = props => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md" fixed="true">
+      <Navbar color="light" light expand="md" fixed="top">
         <Link to="/" className="navbar-brand">
           <span>e</span>-shop
         </Link>

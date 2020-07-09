@@ -49,3 +49,7 @@ button {
 button:active {
     outline: none;
 }
+
+main {
+    margin-top: 76px;
+}
