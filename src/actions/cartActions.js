@@ -14,9 +14,9 @@ export const removeFromCart = item => dispatch => {
   })
 }
 
-export const decreaseQuantity = item =>dispatch => {
+export const decreaseQuantity = item => dispatch => {
   dispatch({
     type: DECREASE_QUANTITY,
-    item
+    item,
   })
 }

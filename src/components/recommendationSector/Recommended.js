@@ -3,7 +3,7 @@ import { Container, Row } from "reactstrap"
 import ProductCard from "../productCard/ProductCard"
 import styled from "styled-components"
 
-export default function Products() {
+export default function Products({ title }) {
   const items = [
     {
       src: require("../../images/products/product-7.jpg"),
@@ -92,7 +92,7 @@ export default function Products() {
 
   return (
     <Container style={{ marginTop: "40px" }}>
-      <Heading>You may Also Like</Heading>
+      <Heading>{title ? title : "You may Also Like"} </Heading>
       <Row>
         {items.map(item => (
           <ProductCard
