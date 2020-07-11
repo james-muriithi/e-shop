@@ -30,9 +30,13 @@ function Checkout(props) {
                         Total <span>Ksh {props.total}</span>
                       </li>
                     </ul>
-                    
+
                     <div className="mb-4 d-flex w-100 align-items-center mpesa">
-                        <img src={require('../../images/mpesa.png')} alt="mpesa" className="d-none d-lg-block" />
+                      <img
+                        src={require("../../images/mpesa.png")}
+                        alt="mpesa"
+                        className="d-none d-lg-block"
+                      />
                       <input
                         type="text"
                         placeholder="Enter Your Mpesa number"
@@ -40,7 +44,7 @@ function Checkout(props) {
                       />
                     </div>
 
-                    <Row >
+                    <Row>
                       <Col md="12">
                         <div className="order-btn">
                           <button type="submit" className="site-btn place-btn">
