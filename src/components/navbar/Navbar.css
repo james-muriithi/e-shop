@@ -142,6 +142,17 @@
         padding: 15px 30px 12px;
     }
     
+    .cart-icon .cart-hover .select-button .view-card {
+        font-size: 12px;
+        letter-spacing: 2px;
+        display: block;
+        text-align: center;
+        background: #191919;
+        color: #ffffff;
+        padding: 15px 30px 12px;
+        margin-bottom: 10px;
+    }
+    
     @media all and (max-width: 576px) {
         .header__cart {
             margin-top: 0px;

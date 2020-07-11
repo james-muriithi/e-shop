@@ -109,6 +109,7 @@ const NavBar = props => {
                 <h5>Ksh. {props.total ? props.total : 0}</h5>
               </div>
               <div className="select-button">
+                <Link to="/shoping-cart" class="primary-btn view-card">VIEW CART</Link>
                 <Link to="/" className="primary-btn checkout-btn">
                   CHECK OUT
                 </Link>

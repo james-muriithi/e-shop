@@ -136,6 +136,7 @@ function ProductCard({ product, addToCart, ...props }) {
               e.preventDefault()
               product.quantity = quantity
               addToCart(product)
+              onClick()
             }}
           >
             <i className="fa fa-shopping-bag pr-2"></i>ADD TO CART

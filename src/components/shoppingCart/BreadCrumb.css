@@ -1,0 +1,31 @@
+.breadcrumb-text {
+    border-bottom: 1px solid #ebebeb;
+    padding: 15px 0;
+}
+
+.breadcrumb-text.product-more a:nth-child(1):after {
+    color: #252525;
+}
+
+.breadcrumb-text a {
+    display: inline-block;
+    font-size: 16px;
+    color: #252525;
+    margin-right: 28px;
+    position: relative;
+}
+
+.breadcrumb-text a:after {
+    position: absolute;
+    right: -18px;
+    top: 0px;
+    content: "\f105";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #b2b2b2;
+}
+
+.breadcrumb-text span {
+    display: inline-block;
+    color: #b2b2b2;
+}
