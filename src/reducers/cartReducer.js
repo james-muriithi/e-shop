@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/types"
+import { ADD_TO_CART, REMOVE_FROM_CART, DECREASE_QUANTITY } from "../actions/types"
 
 const initialState = {
   cartItems: [],
@@ -34,7 +34,7 @@ const cartReducer = (state = initialState, action) => {
       )
 
       if (existing_item) {
-        let newTotal = state.total - action.item.price * existing_item.quantity
+        let newTotal = state.total - (action.item.price * existing_item.quantity)
         return {
           cartItems: [
             ...state.cartItems.filter(item => action.item.id !== item.id),
@@ -42,7 +42,30 @@ const cartReducer = (state = initialState, action) => {
           total: newTotal,
         }
       }
-      break
+      break;
+    case DECREASE_QUANTITY:
+      let item_exist = state.cartItems.find(
+        item => action.item.id === item.id
+      )
+
+      if (item_exist) {
+        let newTotal = state.total - action.item.price
+        if (item_exist.quantity > 1) {
+          item_exist.quantity -= 1
+          return {
+            ...state,
+            total: newTotal,
+          }
+        }else{
+          return {
+            cartItems: [
+              ...state.cartItems.filter(item => action.item.id !== item.id),
+            ],
+            total: newTotal,
+          }
+        }
+      }
+      break;
 
     default:
       return state

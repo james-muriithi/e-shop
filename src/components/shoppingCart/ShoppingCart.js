@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { Container, Row, Col } from "reactstrap";
 import { connect } from "react-redux";
 
-import { removeFromCart } from "../../actions/cartActions";
+import { removeFromCart, addToCart, decreaseQuantity } from "../../actions/cartActions";
 import emptyCartSvg from "../../images/empty_cart.svg";
 import './cart.css';
 
@@ -44,15 +44,26 @@ function ShoppingCart(props) {
                                                     <td className="qua-col first-row">
                                                         <div className="quantity">
                                                             <div className="pro-qty">
-                                                                <span className="dec qtybtn">-</span>
-                                                                <input type="text" value={item.quantity} aria-label="item quantity" />
-                                                                <span className="inc qtybtn">+</span>
+                                                                <span className="dec qtybtn"
+                                                                    onClick={() => {
+                                                                        props.decreaseQuantity(item);
+                                                                    }}
+                                                                >-</span>
+                                                                <input type="text" value={item.quantity} readOnly aria-label="item quantity" />
+                                                                <span 
+                                                                onClick={() => {
+                                                                    props.addToCart(item);
+                                                                }}
+                                                                className="inc qtybtn"
+                                                                >+</span>
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td className="total-price first-row">Ksh {item.price * item.quantity}</td>
                                                     <td className="close-td first-row">
-                                                        <i className="fa fa-close"></i>
+                                                        <i className="fa fa-close" onClick={() => {
+                                                            props.removeFromCart(item)
+                                                        }}></i>
                                                     </td>
                                                 </tr>
                                             ))
@@ -65,7 +76,7 @@ function ShoppingCart(props) {
                             }
                         </div>
                         <Row>
-                            {props.cartItems.length > 0 ? <div>
+                            {props.cartItems.length > 0 ? <>
                                 <Col lg="4">
                                     <div className="cart-buttons">
                                         <Link to="/" className="primary-btn continue-shop">Continue shopping</Link>
@@ -87,7 +98,7 @@ function ShoppingCart(props) {
                                         <Link href="#" className="proceed-btn">PROCEED TO CHECK OUT</Link>
                                     </div>
                                 </Col>
-                            </div> : <Col lg="4">
+                            </> : <Col lg="4">
                                     <div className="cart-buttons">
                                         <Link to="/" className="primary-btn continue-shop">Continue shopping</Link>
                                     </div>
@@ -109,4 +120,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {removeFromCart})(ShoppingCart);
+export default connect(mapStateToProps, {removeFromCart, addToCart, decreaseQuantity})(ShoppingCart);
