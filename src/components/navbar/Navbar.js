@@ -11,16 +11,14 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap"
-import { connect } from "react-redux";
+import { connect } from "react-redux"
 
-import product1 from "../../images/products/product-1.jpg"
-import product2 from "../../images/products/product-5.jpg"
-import emptyCartSvg from '../../images/empty_cart.svg';
+import emptyCartSvg from "../../images/empty_cart.svg"
+import { removeFromCart } from "../../actions/cartActions"
 
 import "./Navbar.css"
 
 const NavBar = props => {
-  console.log(props);
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
@@ -64,42 +62,51 @@ const NavBar = props => {
           <div to="#" className="nav-link cart-icon">
             <div>
               <i className="fa fa-shopping-bag"></i>
-              
-              {props.cartItems.length > 0 && <span className="number">{props.cartItems.length}</span>}
+
+              {props.cartItems.length > 0 && (
+                <span className="number">{props.cartItems.length}</span>
+              )}
             </div>
             <div className="cart-hover">
               <div className="select-items">
-                {props.cartItems.length > 0 ? <table>
-                  <tbody>
-                    {
-                      props.cartItems.map((item, index) =>(
+                {props.cartItems.length > 0 ? (
+                  <table>
+                    <tbody>
+                      {props.cartItems.map((item, index) => (
                         <tr key={index}>
                           <td className="si-pic">
                             <img src={item.src} alt="" />
                           </td>
                           <td className="si-text">
                             <div className="product-selected">
-                              <p>Ksh. {item.price} x {item.quantity}</p>
+                              <p>
+                                Ksh. {item.price} x {item.quantity}
+                              </p>
                               <h6>{item.name}</h6>
                             </div>
                           </td>
-                          <td className="si-close">
+                          <td
+                            className="si-close"
+                            onClick={() => {
+                              props.removeFromCart(item)
+                            }}
+                          >
                             <i className="fa fa-close"></i>
                           </td>
                         </tr>
-                      ))
-                    }
-                  </tbody>
-                </table> : 
-                <div className="text-center">
+                      ))}
+                    </tbody>
+                  </table>
+                ) : (
+                  <div className="text-center">
                     <img src={emptyCartSvg} alt="empty cart" />
                     <p className="mt-2 mb-3">Your shopping cart is empty.</p>
-                </div>
-                }
+                  </div>
+                )}
               </div>
               <div className="select-total">
                 <span>total:</span>
-                <h5>Ksh. {props.total? props.total : 0}</h5>
+                <h5>Ksh. {props.total ? props.total : 0}</h5>
               </div>
               <div className="select-button">
                 <Link to="/" className="primary-btn checkout-btn">
@@ -117,9 +124,9 @@ const NavBar = props => {
 
 const mapStateToProps = state => {
   return {
-    cartItems : state.cart.cartItems,
-    total: state.cart.total
+    cartItems: state.cart.cartItems,
+    total: state.cart.total,
   }
 }
 
-export default connect(mapStateToProps,null)(NavBar)
+export default connect(mapStateToProps, { removeFromCart })(NavBar)

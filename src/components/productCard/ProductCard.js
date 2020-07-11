@@ -4,13 +4,13 @@ import { Link } from "gatsby"
 import "lazysizes"
 import "lazysizes/plugins/attrchange/ls.attrchange"
 import "lazysizes/plugins/parent-fit/ls.parent-fit"
-import { connect } from "react-redux";
+import { connect } from "react-redux"
 
 import "./ProductCard.css"
 import Like from "../favourite/Like"
 import ProductSheet from "../bottomSheet/ProductSheet"
 import Stars from "../rating/Stars"
-import { addToCart } from "../../actions/cartActions";
+import { addToCart } from "../../actions/cartActions"
 
 function ProductCard({ product, addToCart, ...props }) {
   const [open, setOpen] = useState(false)
@@ -53,10 +53,13 @@ function ProductCard({ product, addToCart, ...props }) {
           </div>
           <ul>
             <li className="w-icon active">
-              <Link to="#" onClick={(e) =>{
-                e.preventDefault();
-                addToCart(product)
-              }}>
+              <Link
+                to="#"
+                onClick={e => {
+                  e.preventDefault()
+                  addToCart(product)
+                }}
+              >
                 <i className="fa fa-shopping-bag"></i>
               </Link>
             </li>
@@ -127,7 +130,14 @@ function ProductCard({ product, addToCart, ...props }) {
           </div>
         </div>
         <div className="add_to_cart mt-5">
-          <button className="primary-btn btn w-100 text-center">
+          <button
+            className="primary-btn btn w-100 text-center"
+            onClick={e => {
+              e.preventDefault()
+              product.quantity = quantity
+              addToCart(product)
+            }}
+          >
             <i className="fa fa-shopping-bag pr-2"></i>ADD TO CART
           </button>
         </div>
@@ -141,4 +151,4 @@ function ProductCard({ product, addToCart, ...props }) {
 //   total: state.cart.total
 // })
 
-export default connect(null, {addToCart})(ProductCard);
+export default connect(null, { addToCart })(ProductCard)
