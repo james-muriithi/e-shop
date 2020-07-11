@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap"
 import { connect } from "react-redux"
 
 import emptyCartSvg from "../../images/empty_cart.svg"
+import mpesa from "../../images/mpesa.png"
 import "./Checkout.css"
 
 function Checkout(props) {
@@ -33,7 +34,7 @@ function Checkout(props) {
 
                     <div className="mb-4 d-flex w-100 align-items-center mpesa">
                       <img
-                        src={require("../../images/mpesa.png")}
+                        src={mpesa}
                         alt="mpesa"
                         className="d-none d-lg-block"
                       />

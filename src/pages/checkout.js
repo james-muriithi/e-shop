@@ -7,15 +7,15 @@ import BreadCrumb from "../components/shoppingCart/BreadCrumb"
 import Recommended from "../components/recommendationSector/Recommended"
 import Layout from "../components/layout/Layout"
 import SEO from "../components/seo/Seo"
-import Checkout from "../components/checkout/Checkout"
+import CheckoutSection from "../components/checkoutSection/Checkout"
 
-export default function CheoutPage() {
+export default function CheckoutPage() {
   return (
     <Provider store={store}>
       <Layout>
         <SEO />
         <BreadCrumb current="Check Out" />
-        <Checkout />
+        <CheckoutSection />
         <Recommended title="People Also Bought" />
       </Layout>
     </Provider>
