@@ -3,6 +3,8 @@ import { Container, Row } from "reactstrap"
 import ProductCard from "../productCard/ProductCard"
 import styled from "styled-components"
 
+import { recommendedItems as items } from "../../data";
+
 export default function Products({ title }) {
   const Heading = styled.h3`
     font-size: 20px;
