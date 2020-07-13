@@ -1,6 +1,6 @@
 export const items = [
     {
-        src: require("../../images/products/product-1.jpg"),
+        src: require("../images/products/product-1.jpg"),
         name: "Sweater",
         id: 1,
         price: 200,
@@ -11,7 +11,7 @@ export const items = [
         sizes: [ "xxl", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/product-2.jpg"),
+        src: require("../images/products/product-2.jpg"),
         name: "Sweater",
         id: 2,
         price: 250,
@@ -20,7 +20,7 @@ export const items = [
         sizes: [ "xxl", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/product-3.jpg"),
+        src: require("../images/products/product-3.jpg"),
         name: "Jacket",
         id: 3,
         price: 500,
@@ -29,7 +29,7 @@ export const items = [
         sizes: [ "xxl", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/product-4.jpg"),
+        src: require("../images/products/product-4.jpg"),
         name: "Scarf",
         id: 4,
         price: 250,
@@ -38,7 +38,7 @@ export const items = [
         sizes: [ "xxl", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/product-5.jpg"),
+        src: require("../images/products/product-5.jpg"),
         name: "Cape",
         id: 5,
         color: "yellow",
@@ -47,7 +47,7 @@ export const items = [
         sizes: [ "xl", "xxl", "l" ],
     },
     {
-        src: require("../../images/products/product-6.jpg"),
+        src: require("../images/products/product-6.jpg"),
         name: "Sweater",
         id: 6,
         price: 200,
@@ -56,7 +56,7 @@ export const items = [
         sizes: [ "sm", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/product-11.jpg"),
+        src: require("../images/products/product-11.jpg"),
         name: "Sneakers",
         id: 7,
         price: 2000,
@@ -68,7 +68,7 @@ export const items = [
 
 export const recommendedItems = [
     {
-        src: require("../../images/products/product-7.jpg"),
+        src: require("../images/products/product-7.jpg"),
         name: "Sweater",
         id: 8,
         price: 1000,
@@ -77,7 +77,7 @@ export const recommendedItems = [
         sizes: [ "xxl", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/product-8.jpg"),
+        src: require("../images/products/product-8.jpg"),
         name: "Sweater",
         id: 9,
         price: 700,
@@ -86,7 +86,7 @@ export const recommendedItems = [
         sizes: [ "xxl", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/product-9.jpg"),
+        src: require("../images/products/product-9.jpg"),
         name: "Jacket",
         id: 10,
         price: 1500,
@@ -95,7 +95,7 @@ export const recommendedItems = [
         sizes: [ "xxl", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/man-4.jpg"),
+        src: require("../images/products/man-4.jpg"),
         name: "Scarf",
         id: 11,
         price: 600,
@@ -104,7 +104,7 @@ export const recommendedItems = [
         sizes: [ "xxl", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/women-4.jpg"),
+        src: require("../images/products/women-4.jpg"),
         name: "Cape",
         id: 12,
         color: "yellow",
@@ -113,7 +113,7 @@ export const recommendedItems = [
         sizes: [ "xxl", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/product-10.jpg"),
+        src: require("../images/products/product-10.jpg"),
         name: "Sneakers",
         id: 13,
         price: 1000,
@@ -122,7 +122,7 @@ export const recommendedItems = [
         sizes: [ "xxl", "xxl", "xl" ],
     },
     {
-        src: require("../../images/products/man-3.jpg"),
+        src: require("../images/products/man-3.jpg"),
         name: "Sweater",
         id: 14,
         price: 500,
