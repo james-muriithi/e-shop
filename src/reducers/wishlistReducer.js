@@ -9,42 +9,21 @@ const initialState = {
 const wishlistReducer = (state = initialState, action) => {
     switch (action.type) {
         case TOGGLE_TO_WISHLIST:
-            let newTotal = state.total + action.item.price
 
-            let existed_item = state.cartItems.find(
+            let existed_item = state.wishlistItems.find(
                 item => action.item.id === item.id
             )
 
             if (existed_item) {
-                existed_item.quantity += 1
                 return {
-                    ...state,
-                    total: newTotal,
+                    wishlistItems: [...state.cartItems.filter(item => item.id == action.item.id) ]
                 }
             }
-            action.item.quantity = action.item.quantity ? action.item.quantity : 1
-            newTotal = state.total + action.item.price * action.item.quantity
             return {
-                cartItems: [ action.item, ...state.cartItems ],
-                total: newTotal,
+                wishlistItems: [ action.item, ...state.wishlistItems ],
             }
 
-        case REMOVE_FROM_WISHLIST:
-            let existing_item = state.cartItems.find(
-                item => action.item.id === item.id
-            )
-
-            if (existing_item) {
-                let newTotal = state.total - action.item.price * existing_item.quantity
-                return {
-                    cartItems: [
-                        ...state.cartItems.filter(item => action.item.id !== item.id),
-                    ],
-                    total: newTotal,
-                }
-            }
-            break
-        default:
+            default:
             return state
     }
 }
