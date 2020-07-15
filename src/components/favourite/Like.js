@@ -1,19 +1,33 @@
-import React, { useRef } from "react"
+import React, {useEffect, useState } from "react"
+import { connect } from "react-redux"
 
+import { toggleWishlist } from "../../actions/wishListActions";
 import "./Like.css"
 
-export default function Like() {
-  const myButton = useRef(null)
+function Like(props) {
 
-  const animate = e => {
-    myButton.current.classList.toggle("checked")
+  const [checked, setChecked] = useState(false)
+
+  const animate = () => {
+    setChecked(prevState => !prevState);
+    props.toggleWishlist(props.product)
   }
+
+  useEffect(() => {
+    if (props.wishlistItems){
+      let existed_item = props.wishlistItems.find(
+        item => props.product.id === item.id
+      )
+
+      if (existed_item) {
+        setChecked(true);
+      }
+    }
+  }, [props])
 
   return (
     <button
-      className="fav"
-      data-json={{ r: "gg" }}
-      ref={myButton}
+      className={`fav${checked ? ` checked`: ``}`}
       onClick={animate}
       aria-label="like button"
     >
@@ -81,3 +95,9 @@ export default function Like() {
     </button>
   )
 }
+
+const mapStateToProps = state => ({
+  wishlistItems: state.wishlist.wishlistItems
+})
+
+export default connect(mapStateToProps, {toggleWishlist})(Like);

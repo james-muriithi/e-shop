@@ -5,6 +5,11 @@ button.fav {
     background: transparent;
 }
 
+button.fav:focus,
+button.fav:active {
+    outline: none;
+}
+
 button.fav label {
     margin-bottom: 4px!important;
 }

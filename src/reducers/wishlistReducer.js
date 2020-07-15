@@ -16,7 +16,7 @@ const wishlistReducer = (state = initialState, action) => {
 
             if (existed_item) {
                 return {
-                    wishlistItems: [...state.cartItems.filter(item => item.id == action.item.id) ]
+                    wishlistItems: [ ...state.wishlistItems.filter(item => item.id !== action.item.id) ]
                 }
             }
             return {

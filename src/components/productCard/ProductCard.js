@@ -49,7 +49,7 @@ function ProductCard({ product, addToCart, ...props }) {
           />
           {product.label && <div className="sale">{product.label}</div>}
           <div className="icon like">
-            <Like />
+            <Like product={product} />
           </div>
           <ul>
             <li className="w-icon active">
@@ -146,10 +146,5 @@ function ProductCard({ product, addToCart, ...props }) {
     </Col>
   )
 }
-
-// const mapStateToProps = state => ({
-//   cartItems: state.cart.cartItems,
-//   total: state.cart.total
-// })
 
 export default connect(null, { addToCart })(ProductCard)

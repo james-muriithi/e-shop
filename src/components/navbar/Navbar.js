@@ -57,7 +57,7 @@ const NavBar = props => {
         <div className="header__cart d-flex ml-auto">
           <Link to="#" className="nav-link">
             <i className="fa fa-heart"></i>
-            <span className="number">2</span>
+            {props.wishlistItems.length > 0 && <span className="number">{props.wishlistItems.length}</span>}
           </Link>
           <div to="#" className="nav-link cart-icon">
             <div>
@@ -129,6 +129,7 @@ const mapStateToProps = state => {
   return {
     cartItems: state.cart.cartItems,
     total: state.cart.total,
+    wishlistItems: state.wishlist.wishlistItems
   }
 }
 
