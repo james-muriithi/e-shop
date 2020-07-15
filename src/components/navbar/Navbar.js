@@ -112,7 +112,7 @@ const NavBar = props => {
                 <Link to="/shoping-cart" className="primary-btn view-card">
                   VIEW CART
                 </Link>
-                <Link to="/" className="primary-btn checkout-btn">
+                <Link to="/checkout" className="primary-btn checkout-btn">
                   CHECK OUT
                 </Link>
               </div>
