@@ -54,6 +54,7 @@ function ProductCard({ product, addToCart, ...props }) {
           <ul>
             <li className="w-icon active">
               <Link
+                aria-label="add to cart"
                 to="#"
                 onClick={e => {
                   e.preventDefault()
@@ -69,14 +70,14 @@ function ProductCard({ product, addToCart, ...props }) {
               </Link>
             </li>
             <li className="w-icon">
-              <Link to="#">
+              <Link to="#" aria-label="share">
                 <i className="fa fa-share"></i>
               </Link>
             </li>
           </ul>
         </div>
         <div className="pi-text">
-          <Link to="#">
+          <Link to="#" style={{minHeight: "42px"}} className="d-flex align-items-center">
             <h5>{product.name}</h5>
           </Link>
           <div className="ratings">
@@ -107,6 +108,7 @@ function ProductCard({ product, addToCart, ...props }) {
           <div className="d-flex px-2">
             <button
               onClick={decreaseQuantity}
+              aria-label="subtract quantity"
               className="minus btn-outline-warning text-secondary btn"
             >
               <i className="fa fa-minus"></i>
@@ -119,10 +121,12 @@ function ProductCard({ product, addToCart, ...props }) {
               onChange={onChange}
               className="mx-2 form-control text-center"
               autoComplete="off"
+              aria-label="product quantity"
             />
 
             <button
               onClick={incrementQuantity}
+              aria-label="add quantity"
               className="plus btn-outline-warning text-secondary text-secondary btn"
             >
               <i className="fa fa-plus"></i>

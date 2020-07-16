@@ -55,11 +55,11 @@ const NavBar = props => {
           </Nav>
         </Collapse>
         <div className="header__cart d-flex ml-auto">
-          <Link to="#" className="nav-link">
+          <Link to="#" className="nav-link" aria-label="view wishlist">
             <i className="fa fa-heart"></i>
             {props.wishlistItems.length > 0 && <span className="number">{props.wishlistItems.length}</span>}
           </Link>
-          <div to="#" className="nav-link cart-icon">
+          <div to="#" className="nav-link cart-icon" aria-label="view cart">
             <div>
               <i className="fa fa-shopping-bag"></i>
 
